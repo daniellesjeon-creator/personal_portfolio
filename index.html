@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danielle Jeon's Personal Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#ffffff',
+            foreground: '#1e293b',
+            primary: {
+              DEFAULT: '#1e3a8a',
+              foreground: '#ffffff'
+            },
+            secondary: '#0f172a',
+            accent: {
+              DEFAULT: '#1e3a8a',
+              foreground: '#ffffff'
+            },
+            muted: {
+              DEFAULT: '#64748b',
+              foreground: '#475569'
+            },
+            card: {
+              DEFAULT: '#f8fafc',
+              foreground: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #ffffff;
+    }
+    .tab-active {
+      border-bottom: 2px solid #1e3a8a;
+      color: #1e3a8a;
+    }
+    .profile-image {
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 24px; /* similar to rounded-3xl */
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 2rem auto; /* center image with some spacing */
+    } 
+    .profile-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+    }
+  </style>
+  
+</head>
+<body class="text-foreground">
+  
+  <!-- Top Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo/Name -->
+        <a href="#home" class="text-2xl font-bold text-secondary"> </a>
+        
+        <!-- Navigation Tabs -->
+        <div class="flex gap-8">
+          <a href="#home" class="tab-active px-4 py-2 text-sm font-medium uppercase tracking-wider transition-colors duration-300 hover:text-primary">
+            Home
+          </a>
+          <a href="#about" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-muted-foreground transition-colors duration-300 hover:text-primary">
+            About
+          </a>
+          <a href="#projects" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-muted-foreground transition-colors duration-300 hover:text-primary">
+            Projects
+          </a>
+          <a href="#contact" class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-muted-foreground transition-colors duration-300 hover:text-primary">
+            Contact
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <a href="#home" class="text-2xl font-bold text-secondary"> </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-6 lg:px-12 pt-32">
+    
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center mb-32 scroll-mt-24">
+      <div class="text-center max-w-4xl">
+        <h1 class="text-6xl lg:text-7xl font-bold text-secondary mb-6 text-balance">
+          Danielle Jeon
+        </h1>
+        
+        <p class="text-lg text-muted-foreground leading-relaxed mb-4">
+          UC Berkeley College of Engineering · Class of 2029
+        </p>
+        <p class="text-lg text-foreground leading-relaxed max-w-2xl mx-auto">
+          Freshman @ UC Berkeley studying Mechanical Engineering with a passion for computer-aided design and biotechnolgy
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="mb-32 scroll-mt-24">
+      <h2 class="text-sm text-primary uppercase tracking-wider mb-12 font-semibold">About Me</h2>
+      
+      <img 
+        src="https://drive.google.com/file/d/1dnifJAnE-OseQI1hrvdOi_Vkr5DMpxa1/view" 
+        alt="Danielle Jeon Profile Photo"
+        class="rounded-3xl"
+      />
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="text-lg text-foreground leading-relaxed mb-6">
+            <span class="text-primary font-medium">mechanical engineering student</span>, riverside -> berkeley, passionate about the intersection of <span class="text-primary font-medium">biomedical engineering, robotics, and human-centered design</span>, particularly interested in medical devices and prosthetics
+          </p>
+          <p class="text-lg text-foreground leading-relaxed">
+            other hobbies/interests: running • weightlifting • crocheting • photography • baking • trying new foods • traveling • collecting vinyls • snowboarding • rap music
+          </p>
+        </div>
+
+        <div>
+          <div class="mb-8">
+            <h3 class="text-xl font-semibold text-secondary mb-4">Education</h3>
+            <p class="text-lg font-medium text-foreground mb-2">University of California, Berkeley</p>
+            <p class="text-muted-foreground mb-4">b.s. mechanical engineering • may 2029</p>
+          </div>
+
+          <div class="mb-8">
+            <h3 class="text-sm text-primary uppercase tracking-wider mb-3 font-semibold">Technical Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">SolidWorks</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">MATLAB</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">Python</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">AutoCAD</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">CATIA</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">Java</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">C/C++</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">Fusion 360</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">Onshape</span>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-primary uppercase tracking-wider mb-3 font-semibold">Engineering Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">3D Printing</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">Laser Cutting</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">Soldering</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">GD&T</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">FEA</span>
+              <span class="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">DFM/DFA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Research + Activities) -->
+    <section id="projects" class="mb-32 scroll-mt-24">
+      <h2 class="text-sm text-primary uppercase tracking-wider mb-12 font-semibold">Projects & Experience</h2>
+      
+      <div class="space-y-16">
+        <!-- Research Projects -->
+        <div>
+          <h3 class="text-2xl font-bold text-secondary mb-8">Research</h3>
+          <div class="space-y-12">
+            
+            <article class="border-l-2 border-primary pl-6">
+              <div class="flex flex-wrap items-center gap-4 mb-3">
+                <span class="text-sm text-muted-foreground uppercase tracking-wider">Jan — Aug 2025</span>
+              </div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">
+                Neuroscience Research Assistant
+              </h4>
+              <p class="text-primary font-medium mb-3">Loma Linda University</p>
+              <p class="text-foreground leading-relaxed mb-4">
+                Engineered a custom external casing for a Neuropixel probe using Fusion, optimizing for biocompatibility, dimensional constraints, and integration with microelectronic components. Collaborated closely with neuroscientists to practice cytokine staining and advanced imaging, while gaining hands-on experience in thermal regulation, precise sample preparation, and maintaining critical sterile conditions.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Fusion 360</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Cryosectioning</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Microscopy</span>
+              </div>
+            </article>
+
+            <article class="border-l-2 border-gray-300 pl-6">
+              <div class="flex flex-wrap items-center gap-4 mb-3">
+                <span class="text-sm text-muted-foreground uppercase tracking-wider">Aug 2024 — Jul 2025</span>
+              </div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">
+                Journal Club Member
+              </h4>
+              <p class="text-primary font-medium mb-3">Stanford University</p>
+              <p class="text-foreground leading-relaxed mb-4">
+                Developed a deeper understanding of neural systems and bioinstrumentation, informing future interest in human-centered design, medical devices, and sensor-actuator integration. Conducted monthly literature reviews of cutting-edge neuroscience research papers applicable to real-world applications.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Data Analysis</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Neuroscience</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Bioinstrumentation</span>
+              </div>
+            </article>
+
+            <article class="border-l-2 border-gray-300 pl-6">
+              <div class="flex flex-wrap items-center gap-4 mb-3">
+                <span class="text-sm text-muted-foreground uppercase tracking-wider">Oct — Dec 2024</span>
+              </div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">
+                Independent Researcher
+              </h4>
+              <p class="text-primary font-medium mb-3">Columbia University</p>
+              <p class="text-foreground leading-relaxed mb-4">
+                Designed a modular upper extremity prosthetic socket using Onshape CAD, focusing on anatomical fit and user adaptability. Researched advanced bio-materials to use for replaceable socket linings through scholarly literature and biomedical sources. Presented findings and CAD at virtual symposium with 300+ attendees.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Onshape</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Prosthetics</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">CAD Design</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Leadership & Activities -->
+        <div>
+          <h3 class="text-2xl font-bold text-secondary mb-8">Leadership & Activities</h3>
+          <div class="space-y-12">
+            
+            <article class="border-l-2 border-primary pl-6">
+              <div class="flex flex-wrap items-center gap-4 mb-3">
+                <span class="text-sm text-muted-foreground uppercase tracking-wider">Sep 2025 — June 2025</span>
+              </div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">
+                Mechanical Design Lead
+              </h4>
+              <p class="text-primary font-medium mb-3">Redlands Robotics</p>
+              <p class="text-foreground leading-relaxed mb-4">
+                Designed, modeled, and iterated mechanical components for competitive robotics using Onshape, optimizing for weight, durability, and stability under First Robotics Competition constraints. Collaborated with cross-functional teams to prototype, test, and refine robot designs under tight competition timelines.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">CAD</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">FRC</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Onshape</span>
+              </div>
+            </article>
+
+            <article class="border-l-2 border-gray-300 pl-6">
+              <div class="flex flex-wrap items-center gap-4 mb-3">
+                <span class="text-sm text-muted-foreground uppercase tracking-wider">Oct 2024 — Jun 2025</span>
+              </div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">
+                Chapter Founder & Lead
+              </h4>
+              <p class="text-primary font-medium mb-3">Girls Who Code</p>
+              <p class="text-foreground leading-relaxed mb-4">
+                Established and led the first Girls Who Code chapter in the Redlands Unified School District, creating a long-term initiative aimed at closing the gender gap in STEM. Designed and facilitated weekly coding sessions and project-based learning workshops in Python and Java.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Python</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Java</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Leadership</span>
+              </div>
+            </article>
+
+            <article class="border-l-2 border-gray-300 pl-6">
+              <div class="flex flex-wrap items-center gap-4 mb-3">
+                <span class="text-sm text-muted-foreground uppercase tracking-wider">Jan 2024 — Jun 2025</span>
+              </div>
+              <h4 class="text-xl font-semibold text-secondary mb-2">
+                Treasurer
+              </h4>
+              <p class="text-primary font-medium mb-3">Asian Student Union</p>
+              <p class="text-foreground leading-relaxed mb-4">
+                Successfully raised over $1,500 through strategic fundraising initiatives, directing more than $600 in donations to various national charities and Asian-led organizations. Organized and executed multiple fundraising events in collaboration with local Asian-owned businesses, attracting over 100 student participants per event.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Fundraising</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Event Planning</span>
+                <span class="px-3 py-1 text-xs font-medium bg-card text-foreground rounded-full border border-gray-200">Community Outreach</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Current Involvement -->
+        <div class="bg-card p-8 rounded-lg border border-gray-200">
+          <h3 class="text-lg font-semibold text-secondary mb-4">Current Involvement</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-full">Theta Tau Professional Engineering Fraternity</span>
+            <span class="px-4 py-2 text-sm font-medium bg-primary/10 text-primary rounded-full">Biomedical Engineering Society</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mb-32 scroll-mt-24">
+      <h2 class="text-sm text-primary uppercase tracking-wider mb-12 font-semibold">Get In Touch</h2>
+      <div class="max-w-3xl">
+        <p class="text-lg text-foreground leading-relaxed mb-8">
+          I'm always interested in new opportunities, research collaborations, and connecting with others. Whether you have a project idea, want to discuss biomedical engineering, or just want to chat about foods, gym, and/or running, feel free to reach out!
+        </p>
+        <div class="flex flex-wrap gap-4 mb-8">
+          <a href="mailto:daniellesjeon@berkeley.edu" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors duration-300">
+            Email Me
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/daniellejeon06" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary font-medium rounded-lg hover:bg-primary/10 transition-colors duration-300">
+            LinkedIn
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+        <div class="text-muted-foreground">
+          <p class="mb-2"><strong>Email:</strong> daniellesjeon@berkeley.edu</p>
+          <p><strong>Phone:</strong> (909) 654-0591</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-200 text-center text-sm text-muted-foreground">
+      <p>Designed & Built by Danielle Jeon</p>
+      <p class="mt-2">© 2025 All rights reserved.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
